@@ -24,28 +24,22 @@ void create(int A[],int n)
 
   }
 
-}
-void insertatbeg(struct Node *p,int key)
-{
-    struct Node *t;
-    t=(struct Node *)malloc(sizeof(struct Node));
-    t->data=key;
-    t->next=first;
-    first=t;
-    
 
 }
-void insertatpos(int pos,int key,struct Node *p)
+
+void sortedinsert(struct Node *p,int key)
 {
+    struct Node *q=NULL;
     struct Node *t;
     t=(struct Node *)malloc(sizeof(struct Node));
-    t->data=key;
-    for(int i=0;i<pos-1;i++)
-    {
-        p=p->next;
-    }
-    t->next=p->next;
-    p->next=t;
+     t->data=key;
+     while(p->data<key)
+     {
+      q=p;
+      p=p->next;
+     } 
+     t->next=q->next;
+     q->next=t;
 
 }
 
@@ -53,21 +47,18 @@ void display(struct Node *p)
 {
     while(p!=NULL)
     {
-        printf("%d\t",p->data);
+        printf("%d",p->data);
         p=p->next;
     }
 }
 
 int main()
 {
-    int A[]={1,2,3,4,5};
+    int A[]={1,2,3,4,6};
     create(A,5);
     display(first);
-    printf("\nAfter insertion at the beginning :");
-     insertatbeg(first,17);
-    printf("\nInsertion at the fourth position:");
-     insertatpos(3,20,first);
-     display(first);
-
-     return 0;
+    printf("\nInsertion in a sorted list :");
+    sortedinsert(first,5);
+    display(first);
+    return 0;
 }
