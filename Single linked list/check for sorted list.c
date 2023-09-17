@@ -27,19 +27,45 @@ void create(int A[],int n)
 
 }
 
+int issort(struct Node *p)
+{
+  int x=-5446;
+  while(p!=NULL)
+  {
+    if(p->data<x)
+    {
+      return -1;
+    }
+    else{
+      x=p->data;
+      p=p->next;}
+  
+  }
+  return 1;
+}
+
 void display(struct Node *p)
 {
     while(p!=NULL)
     {
-        printf("%d",p->data);
+        printf("%d\t",p->data);
         p=p->next;
     }
 }
 
 int main()
 {
-    int A[]={1,2,3,4,5};
+    int A[]={1,2,30,4,5};
     create(A,5);
     display(first);
+    printf("%d",issort(first));
+    if(issort(first)==1)
+    {
+        printf("\nSorted");
+    }
+    else if(issort(first)==-1)
+    {
+        printf("\nNot sorted!");
+    }
     return 0;
 }
