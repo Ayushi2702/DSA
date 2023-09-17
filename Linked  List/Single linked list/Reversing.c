@@ -62,6 +62,20 @@ void reverseusingarray(struct Node *p)
 
 }
 
+void reverseusingpointer(struct Node *p)
+{    p=first;
+    struct Node *q,*r;
+    q=NULL;
+    r=NULL;
+    while(p!=NULL)
+    {
+        r=q;
+        q=p;
+        p=p->next;
+        q->next=r;
+    }
+    first=q;
+}
 
  
 void display(struct Node *p)
@@ -79,6 +93,7 @@ int main()
     create(A,5);
     display(first);
     printf("\nThe reversed list is : ");
+    reverseusingpointer(first);
     reverseusingarray(first);
     display(first);
     return 0;
