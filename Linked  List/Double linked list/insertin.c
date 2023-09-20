@@ -64,7 +64,15 @@ void insert(struct node *p,int index,int x)
       }
       t=(struct node *)malloc(sizeof(struct node));
       t->data=x;
-      
+      t->prev=p;
+      t->next=p->next;
+      if(p->next)
+      {
+        p->next->prev=t;
+      }
+        p->next=t;
+            
+
 
     }
 }
@@ -73,7 +81,7 @@ void display(struct node *p)
 {
     while(p!=0)
     {
-        printf("%d",p->data);
+        printf("%d\t",p->data);
         p=p->next;
     }
 }
@@ -83,6 +91,9 @@ int main()
 {
     int A[]={1,2,3,4,5};
     create(A,5);
+    display(first);
+    insert(first,3,20);
+    printf("\nAfter insertion of a node :\t");
     display(first);
     return 0;
 }
