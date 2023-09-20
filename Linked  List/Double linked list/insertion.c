@@ -86,6 +86,10 @@ void display(struct node *p)
     }
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 974981ac5635f4dd8544e7f59c1bb5b31123cb01
 int main()
 {
     int A[]={1,2,3,4,5};
