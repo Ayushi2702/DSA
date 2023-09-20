@@ -86,7 +86,7 @@ void display(struct node *p)
     }
 }
 
-//contriubtion again from ayushi
+//contriubtion again from ayushi hehe
 int main()
 {
     int A[]={1,2,3,4,5};
