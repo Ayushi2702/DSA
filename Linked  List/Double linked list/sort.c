@@ -37,7 +37,6 @@ void sortinsert(struct node *p, int key) {
     // If the list is empty, make the new node the first node
     if (!p) {
         first = t;
-        return;
     }
 
     // Traverse the list to find the correct position for insertion
