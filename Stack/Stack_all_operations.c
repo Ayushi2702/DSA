@@ -27,7 +27,7 @@ void push(struct Stack *st,int x)
     }
 
    else{
-       st->top++;
+       st->top++; 
        st->S[st->top]=x;
 
    } 
