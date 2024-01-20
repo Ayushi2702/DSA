@@ -61,5 +61,8 @@ int main()
     push(20);
     push(30);
     push(40);
+    printf("%d\n ",pop());
     display();
+
+    return 0;
 }
