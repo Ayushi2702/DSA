@@ -33,7 +33,7 @@ int isBalanced(char* exp)
             else
             {
                 char temp = stk.top();
-                itr = mapping.find(exp[i]);
+                itr = mapping.find(exp[i]); //itr starts pointing to that specific pair
 
                 if (temp == itr->second)
                 {
