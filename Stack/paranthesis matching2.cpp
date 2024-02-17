@@ -37,7 +37,7 @@ int isBalanced(char* exp)
 
                 if (temp == itr->second)
                 {
-                    stk.pop();
+                    stk.pop(); //removing the bracket
                 }
                 else
                 {
