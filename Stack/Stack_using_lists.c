@@ -5,7 +5,7 @@ struct Node{
     int data ;
     struct Node *next;
 }*top=NULL;
-void push(int x)
+void push(int x)2
 {
 struct Node *t;
 t=(struct Node *)malloc(sizeof(struct Node));

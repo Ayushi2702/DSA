@@ -81,7 +81,7 @@ void display(struct Stack st)
     {
         printf("%d ",st.S[i]);
     }
-}
+}f
 
 int stackTop(struct Stack st)
 {
